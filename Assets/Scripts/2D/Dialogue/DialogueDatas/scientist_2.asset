@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e1244458e7ccbd4e8662dc59cccdce1, type: 3}
   m_Name: scientist_2
   m_EditorClassIdentifier: 
+  portrait: {fileID: -8450407705803570217, guid: 6a162f8c953473147bd00ce2557b6bd8, type: 3}
   dialogueLines:
-  - Are you looking for Pr. Mustache?
-  - Yupp
-  - Just go down he prepared the experiment for you
+  - speakerTag: NPC
+    text: So you the robot that Doctor picked huh
+  - speakerTag: NPC
+    text: You can find him just below

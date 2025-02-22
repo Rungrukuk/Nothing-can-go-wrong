@@ -17,11 +17,9 @@ MonoBehaviour:
   - speakerTag: NPC
     text: Hello lil robot, how can I help you?
   - speakerTag: Player
-    text: I want to see Pr. Mustache, he told me that I need to learn the human movement.
+    text: I want to see Dr. Mustache, he told me that I can learn the human movement.
   - speakerTag: NPC
-    text: Oouu, so that's what Pr. Mustache was getting ready for.
+    text: Oh, so you're the reason why he's been so busy.
   - speakerTag: NPC
     text: Just follow the completely unnecessary tubes down the path and you will
       see the twin brothers, they will show the path to you.
-  - speakerTag: Player
-    text: Thank you dude, you're life saver.
