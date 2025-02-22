@@ -43,10 +43,6 @@ public class SpeedSlideState : PlayerState
         base.HandleStateChange();
         if (controller.inputHandler.GetJumpInputDown() || controller.EarlyJumpActivated && controller.IsSliding)
         {
-            if (controller.EarlyJumpActivated)
-            {
-                Debug.Log("I'm in");
-            }
             stateMachine.ChangeState(new SlideJumpState(controller, stateMachine));
         }
         if (!controller.inputHandler.GetCrouchInputHeld()
