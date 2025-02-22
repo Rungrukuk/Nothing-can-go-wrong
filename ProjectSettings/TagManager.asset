@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - NPC
+  - DialoguePanel
   layers:
   - Default
   - TransparentFX
@@ -52,6 +54,9 @@ TagManager:
     locked: 0
   - name: Characters
     uniqueID: 2443168803
+    locked: 0
+  - name: Dialogue
+    uniqueID: 2874259111
     locked: 0
   m_RenderingLayers:
   - Default
