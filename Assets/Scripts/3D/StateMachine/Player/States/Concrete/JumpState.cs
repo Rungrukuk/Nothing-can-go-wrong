@@ -29,7 +29,6 @@ public class JumpState : PlayerState
         {
             if (controller.CharacterVelocity.magnitude >= controller.characterConfig.minSpeedToSlide && controller.inputHandler.GetCrouchInputHeld())
             {
-                Debug.Log("I'm in");
                 stateMachine.ChangeState(new SpeedSlideState(controller, stateMachine));
             }
             if (!controller.inputHandler.GetMoveInput().Equals(Vector3.zero) && controller.inputHandler.GetSprintInputHeld() && !controller.inputHandler.GetCrouchInputHeld())
