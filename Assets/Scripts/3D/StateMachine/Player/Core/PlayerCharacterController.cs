@@ -49,7 +49,6 @@ public class PlayerCharacterController : MonoBehaviour
         ApplyCharacterVelocity();
         debugText.text = "Velocity: " + CharacterVelocity.magnitude + "\n" + "Current State: " + stateMachine.CurrentState;
         UpdateCharacterHeight(false);
-        Debug.Log(EarlyJumpActivated);
     }
 
     private void FixedUpdate()

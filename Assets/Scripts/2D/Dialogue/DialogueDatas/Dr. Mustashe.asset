@@ -15,8 +15,12 @@ MonoBehaviour:
   portrait: {fileID: -236619611796383025, guid: da4736427bfa2d940b4df6b1bc9ff45a, type: 3}
   dialogueLines:
   - speakerTag: NPC
-    text: Salam Kamaldi danisan?
-  - speakerTag: Player
-    text: "Nec\u0259\u0259"
+    text: Who am I seeing. Welcome my first successful robot !
   - speakerTag: NPC
-    text: CAAAAAAAAAAAAARTTTTTTTTTTTTTTTTTTTT
+    text: I have prepared the movement software for you.
+  - speakerTag: NPC
+    text: Do not give attention to level designs as I had no time to prepare them.
+  - speakerTag: NPC
+    text: Are you ready?
+  - speakerTag: Player
+    text: Yess!!!

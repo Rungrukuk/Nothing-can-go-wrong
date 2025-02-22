@@ -1,6 +1,8 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.Collections;
 
 public class PlayerDialogue : MonoBehaviour
 {
@@ -8,13 +10,18 @@ public class PlayerDialogue : MonoBehaviour
 
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private Image speakerImage;
-    [SerializeField] private Text dialogueText;
-
+    [SerializeField] private TMP_Text dialogueText;
     [SerializeField] private Sprite playerPortrait;
+    [SerializeField] private float typingSpeed = 0.05f;
+    [SerializeField] private float typingSoundSpeed = 3;
+    [SerializeField] private AudioSource playerVoice;
+    [SerializeField] private AudioSource NPC_Voice;
+
+    public bool isDialogueActive = false;
 
     private NPC_Dialogue currentNPC;
     private int currentLineIndex = 0;
-    private bool isDialogueActive = false;
+    private Coroutine typingCoroutine;
 
     private void Awake()
     {
@@ -22,6 +29,10 @@ public class PlayerDialogue : MonoBehaviour
             Instance = this;
         else
             Destroy(gameObject);
+    }
+    private void Start()
+    {
+        dialoguePanel.SetActive(false);
     }
 
     private void Update()
@@ -59,6 +70,14 @@ public class PlayerDialogue : MonoBehaviour
 
     private void ContinueDialogue()
     {
+        if (typingCoroutine != null)
+        {
+            StopCoroutine(typingCoroutine);
+            dialogueText.text = currentNPC.dialogueData.dialogueLines[currentLineIndex].text;
+            typingCoroutine = null;
+            return;
+        }
+
         currentLineIndex++;
         if (currentLineIndex < currentNPC.dialogueData.dialogueLines.Length)
         {
@@ -80,15 +99,52 @@ public class PlayerDialogue : MonoBehaviour
         var dialogueLine = currentNPC.dialogueData.dialogueLines[currentLineIndex];
 
         dialoguePanel.SetActive(true);
-        dialogueText.text = dialogueLine.text;
+        dialogueText.text = "";
 
         if (dialogueLine.speakerTag == gameObject.tag)
         {
             speakerImage.sprite = playerPortrait;
+            playerVoice.Play();
         }
         else
         {
             speakerImage.sprite = currentNPC.dialogueData.portrait;
+            NPC_Voice.Play();
         }
+
+        if (typingCoroutine != null)
+            StopCoroutine(typingCoroutine);
+
+        typingCoroutine = StartCoroutine(TypeText(dialogueLine.text));
     }
+
+
+    private IEnumerator TypeText(string line)
+    {
+        dialogueText.text = "";
+        int charCount = 0;
+        for (int i = 0; i < line.Length; i++)
+        {
+            dialogueText.text += line[i];
+            charCount++;
+
+            if (charCount >= typingSoundSpeed)
+            {
+                if (speakerImage.sprite == playerPortrait)
+                {
+                    playerVoice.Play();
+                }
+                else
+                {
+                    NPC_Voice.Play();
+                }
+                charCount = 0;
+            }
+
+            yield return new WaitForSeconds(typingSpeed);
+        }
+
+        typingCoroutine = null;
+    }
+
 }

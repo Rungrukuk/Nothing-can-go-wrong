@@ -18,18 +18,22 @@ public class PlayerMovement_2D : MonoBehaviour
 
     void Update()
     {
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
-        movement = movement.normalized;
-        if (movement.x > 0)
-            spriteRenderer.flipX = false;
-        else if (movement.x < 0)
-            spriteRenderer.flipX = true;
+        if (!PlayerDialogue.Instance.isDialogueActive)
+        {
 
-        if (movement.x != 0 || movement.y != 0)
-            animator.SetBool("isRunning", true);
-        else
-            animator.SetBool("isRunning", false);
+            movement.x = Input.GetAxisRaw("Horizontal");
+            movement.y = Input.GetAxisRaw("Vertical");
+            movement = movement.normalized;
+            if (movement.x > 0)
+                spriteRenderer.flipX = false;
+            else if (movement.x < 0)
+                spriteRenderer.flipX = true;
+
+            if (movement.x != 0 || movement.y != 0)
+                animator.SetBool("isRunning", true);
+            else
+                animator.SetBool("isRunning", false);
+        }
     }
 
     void FixedUpdate()
