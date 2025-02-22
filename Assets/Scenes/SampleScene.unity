@@ -10453,7 +10453,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81df5e7996a2cf94d8bc315d2b10b603, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueData: {fileID: 0}
+  dialogueData: {fileID: 11400000, guid: 6c7c54a049b47114bb305368f93d5885, type: 2}
   cahtBoxImage: {fileID: 1522557183}
 --- !u!70 &1555893830
 CapsuleCollider2D:
@@ -44543,9 +44543,9 @@ SceneRoots:
   - {fileID: 705507995}
   - {fileID: 2105995822}
   - {fileID: 638853719}
-  - {fileID: 439389793}
   - {fileID: 1316713196}
   - {fileID: 1555893827}
+  - {fileID: 439389793}
   - {fileID: 525499269}
   - {fileID: 1719874633}
   - {fileID: 974864065}

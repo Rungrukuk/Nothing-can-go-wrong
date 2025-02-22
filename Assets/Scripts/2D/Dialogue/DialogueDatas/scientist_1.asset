@@ -12,9 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e1244458e7ccbd4e8662dc59cccdce1, type: 3}
   m_Name: scientist_1
   m_EditorClassIdentifier: 
+  portrait: {fileID: 0}
   dialogueLines:
-  - 'Hi there!
+  - speakerTag: NPC
+    text: 'Hi there!
 
-    Hi there!'
-  - Where is the Pr. Mustache?
-  - Just follow the corridor above
+      Hi there!'
+  - speakerTag: Player
+    text: Where is the Pr. Mustache?
+  - speakerTag: NPC
+    text: Just follow the corridor above
