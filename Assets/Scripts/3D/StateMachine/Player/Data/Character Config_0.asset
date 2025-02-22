@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14cd5ff48f6ba204d9dbaf5e30016404, type: 3}
+  m_Name: Character Config_0
+  m_EditorClassIdentifier: 
+  maxWalkSpeedOnGround: 13.333
+  maxSprintSpeed: 20
+  maxSpeedInAir: 400
+  accelerationModifier: 5
+  decelarationModifier: 15
+  crouchingSharpness: 15
+  capsuleHeightStanding: 1.8
+  capsuleHeightCrouching: 0.9
+  crouchSpeedMultiplier: 0.75
+  minSpeedToSlide: 18.5
+  slideMultiplier: 3
+  slidingDecreaseRate: 2
+  maxAngleToSlide: 85
+  minAngleToSlide: 91
+  slideDelayTime: 0.05
+  slideSpeedIncreaseRate: 1.2
+  rotationMultiplier: 0.5
+  jumpForce: 8
+  accelerationRateInAir: 0.8
+  slideJumpBoost: 1.5
+  earlyJumpTime: 0.05

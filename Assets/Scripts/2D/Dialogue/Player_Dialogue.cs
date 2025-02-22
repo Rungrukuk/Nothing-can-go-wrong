@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerDialogue : MonoBehaviour
@@ -43,7 +44,6 @@ public class PlayerDialogue : MonoBehaviour
     {
         currentNPC = null;
         isDialogueActive = false;
-        dialoguePanel.SetActive(false);
         currentLineIndex = 0;
     }
 
@@ -68,6 +68,10 @@ public class PlayerDialogue : MonoBehaviour
         {
             isDialogueActive = false;
             dialoguePanel.SetActive(false);
+            if (currentNPC.name == "Dr. Mustache")
+            {
+                SceneManager.LoadScene("Scene 3D");
+            }
         }
     }
 
