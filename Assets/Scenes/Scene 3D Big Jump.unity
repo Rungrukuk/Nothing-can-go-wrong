@@ -978,7 +978,7 @@ GameObject:
   - component: {fileID: 601980135}
   - component: {fileID: 601980138}
   m_Layer: 0
-  m_Name: Collider Down
+  m_Name: Game Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -992,12 +992,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 601980133}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 969.743, y: -192, z: 123.7037}
   m_LocalScale: {x: 2015.4271, y: 1, z: 1378.4316}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 953188774}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &601980135
 BoxCollider:
@@ -1332,7 +1332,6 @@ Transform:
   - {fileID: 2092819362}
   - {fileID: 148970807}
   - {fileID: 440774561}
-  - {fileID: 601980134}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &963194225
@@ -3949,4 +3948,5 @@ SceneRoots:
   - {fileID: 1948025453}
   - {fileID: 223008514}
   - {fileID: 543450652513986842}
+  - {fileID: 601980134}
   - {fileID: 953188774}
